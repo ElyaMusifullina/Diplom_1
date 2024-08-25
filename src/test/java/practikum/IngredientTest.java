@@ -16,5 +16,4 @@ public class IngredientTest {
     assertEquals("Tar-tar", ingredient.getName());
     assertEquals(15.76f, ingredient.getPrice(), 0.001);
   }
-
 }

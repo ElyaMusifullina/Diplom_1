@@ -82,6 +82,4 @@ public class BurgerTest {
     assertTrue(receipt.contains("Cheese"));
     assertTrue(receipt.contains("Price: " + String.format("%.2f", expectedPrice)));
   }
-
-
 }

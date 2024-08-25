@@ -31,4 +31,3 @@ public class IngredientTypeTest {
     assertEquals(expected, IngredientType.valueOf(input));
   }
 }
-
