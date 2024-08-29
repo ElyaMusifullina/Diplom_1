@@ -43,6 +43,13 @@ public class BurgerTest {
   }
 
   @Test
+  public void testSetBun() {
+    burger.setBuns(bun);
+    assertEquals("Sladkaya bulochka", bun.getName());
+    assertEquals(1.5f, bun.getPrice(),0.001);
+  }
+
+  @Test
   public void testAddIngredient() {
     burger.addIngredient(sauce);
     assertEquals(1, burger.ingredients.size());
@@ -54,6 +61,14 @@ public class BurgerTest {
     burger.addIngredient(filling);
     burger.removeIngredient(0);
     assertEquals(1, burger.ingredients.size());
+  }
+
+  @Test
+  public void testMoveIngredient() {
+    burger.addIngredient(sauce);
+    burger.addIngredient(filling);
+    burger.moveIngredient(1, 0);
+    assertEquals(burger.ingredients.get(0), filling);
   }
 
   @Test
